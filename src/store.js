@@ -41,5 +41,32 @@ export const store = reactive ({
             url: '#nogo',
             current: false,
         },
+    ],
+    imgFirstMain: [
+        {
+            img: '../public/img/Gavel-v2.png',
+            text: 'law faculty',
+            active: true
+        },
+        {
+            img: '../public/img/Coins-tabs-v2.png',
+            text: 'economy',
+            active: false
+        },
+        {
+            img: '../public/img/Medicine-tabs-v2.png',
+            text: 'Medicine',
+            active: false
+        },
+        {
+            img: '../public/img/Computer-tabs-v2.png',
+            text: 'computer science',
+            active: false
+        },
+        {
+            img: '../public/img/Palette-tabs-v2.png',
+            text: 'graphic design',
+            active: false
+        },
     ]
 });
