@@ -51,6 +51,7 @@
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
+
 .header {
     height: 80vh;
     background: url('../../public/img/theme_slider2_bg-1.jpg');
@@ -65,6 +66,7 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         font-size: 20px;
+        box-shadow: 2px 5px 25px $black;
     }
 
 
@@ -75,8 +77,7 @@
 
     .button {
         display: inline-block;
-        height: 60px;
-        width: 200px;
+        padding: 0.1rem 2rem;
         border-radius: 50px;
         line-height: 60px;
         text-align: center;
@@ -161,7 +162,6 @@
     .btn-apply {
         background-color: $white;
         color: $pink2;
-        width: 250px;
     }
 
     .btn-apply:hover {
