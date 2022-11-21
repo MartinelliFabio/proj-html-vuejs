@@ -5,8 +5,9 @@
                 <img src="../../public/img/theme_eduprime_logo.png" alt="Logo" class="logo">
                 <div class="d-flex align-items-end">
                     <ul class="d-flex">
-                        <li v-for="(link, index) in links" :key="index" class="me-5">
-                            <a :href="link.url">{{ link.title }}</a>
+                        <li v-for="(link, index) in links" :key="index" class="me-5 d-flex">
+                            <a :href="link.url" :class="{ 'active': link.current }">{{ link.title }}</a>
+                            <span v-if="link.arrow" :class="{ 'active': link.current }"><i class="fa-solid fa-sort-down"></i></span>
                         </li>
                     </ul>
                     <a href="#nogo">
@@ -106,6 +107,17 @@
 
         ul {
             list-style: none;
+            
+            .active {
+                color: $yellow;
+            }
+
+            span {
+                color: $white;
+                margin-left: 10px;
+                font-size: 12px;
+                cursor: pointer;
+            }
         }
 
         .view {
