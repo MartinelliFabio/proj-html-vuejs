@@ -58,7 +58,7 @@
     position: relative;
 
     .box-icons {
-        position: absolute;
+        position: fixed;
         top: 45%;
         left: 0;
         padding: 20px;
@@ -67,6 +67,7 @@
         border-bottom-right-radius: 5px;
         font-size: 20px;
         box-shadow: 2px 5px 25px $black;
+        z-index: 9999;
     }
 
 
