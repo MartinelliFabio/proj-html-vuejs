@@ -30,11 +30,11 @@
             <div class="wave-header">
                 <img src="../../public/img/Wave-1.png" alt="Wave">
             </div>
-            <div class="box-icons d-flex flex-column align-items-center text-white">
-                <a href="#nogo"><i class="fa-solid fa-cart-shopping mb-3"></i></a>
-                <a href="#nogo"><i class="fa-solid fa-book mb-3"></i></a>
-                <a href="#nogo"><i class="fa-solid fa-life-ring"></i></a>
-            </div>
+        </div>
+        <div class="box-icons d-flex flex-column align-items-center text-white">
+            <a href="#nogo"><i class="fa-solid fa-cart-shopping mb-3"></i></a>
+            <a href="#nogo"><i class="fa-solid fa-book mb-3"></i></a>
+            <a href="#nogo"><i class="fa-solid fa-life-ring"></i></a>
         </div>
     </div>
 </template>
