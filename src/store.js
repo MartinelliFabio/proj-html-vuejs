@@ -102,6 +102,112 @@ export const store = reactive ({
             img: '../public/img/partner-7.png',
             text: 'Partner 8'
         },
-
+    ],
+    socialLinks: [
+        {
+            url: '#nogo',
+            icon: '<i class="fa-brands fa-facebook-f"></i>'
+        },
+        {
+            url: '#nogo',
+            icon: '<i class="fa-brands fa-twitter"></i>'
+        },
+        {
+            url: '#nogo',
+            icon: '<i class="fa-brands fa-instagram"></i>'
+        }
+    ],
+    coursesFooter: [
+        {
+            url: '#nogo',
+            text: 'Economy'
+        },
+        {
+            url: '#nogo',
+            text: 'Design'
+        },
+        {
+            url: '#nogo',
+            text: 'Coaching'
+        },
+        {
+            url: '#nogo',
+            text: 'Business'
+        },
+        {
+            url: '#nogo',
+            text: 'Medicine'
+        },
+        {
+            url: '#nogo',
+            text: 'Law'
+        },
+        {
+            url: '#nogo',
+            text: 'Fitness'
+        }
     ]
 });
+
+const linksFooter = [
+    {
+        title: 'Get EduPrime',
+        links: [
+            {
+                url: '#nogo',
+                text: 'Request a website'
+            },
+            {
+                url: '#nogo',
+                text: 'Browse Themes'
+            },
+            {
+                url: '#nogo',
+                text: 'Payment options'
+            },
+            {
+                url: '#nogo',
+                text: 'Support System'
+            },
+            {
+                url: '#nogo',
+                text: 'Checkout'
+            },
+            {
+                url: '#nogo',
+                text: 'Purchase Theme'
+            },
+        ]
+    },
+    {
+        title: 'Networking',
+        links: [
+            {
+                url: '#nogo',
+                text: 'Purchase Theme'
+            },
+            {
+                url: '#nogo',
+                text: 'Our Benefits'
+            },
+            {
+                url: '#nogo',
+                text: 'Our Team'
+            },
+            {
+                url: '#nogo',
+                text: 'Our Services'
+            },
+            {
+                url: '#nogo',
+                text: 'Other Products'
+            },
+            {
+                url: '#nogo',
+                text: 'My account'
+            }
+        ]
+    }
+]
+
+export { linksFooter };

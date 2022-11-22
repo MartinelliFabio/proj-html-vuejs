@@ -5,6 +5,7 @@ $fa-font-path : "./webfonts";
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
 @import '@fortawesome/fontawesome-free/scss/regular.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
 
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
 
@@ -18,7 +19,7 @@ body {
     color: $black2;
 }
 
-p {
+p, a, input {
     font-family: 'Source Sans Pro', sans-serif;
 }
 

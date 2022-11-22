@@ -6,7 +6,7 @@
     <MainComponent/>
   </main>
   <footer>
-   <FooterComponent/>
+   <FooterComponent :social='store.socialLinks' :courses='store.coursesFooter'/>
   </footer>
 </template>
 
