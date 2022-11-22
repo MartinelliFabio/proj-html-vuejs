@@ -6,14 +6,20 @@ $fa-font-path : "./webfonts";
 @import '@fortawesome/fontawesome-free/scss/regular.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
 
 @import 'bootstrap/scss/bootstrap.scss';
 
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: $black2;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 img {
