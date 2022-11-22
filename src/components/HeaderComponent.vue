@@ -66,22 +66,31 @@
 
     .box-icons {
         position: fixed;
-        top: 45%;
+        top: 35%;
         left: 0;
-        padding: 20px;
+        padding: 10px;
         background-color: $yellow;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        font-size: 20px;
+        font-size: 15px;
         box-shadow: 2px 5px 25px $black;
         z-index: 9999;
+        transition: all 0.3s ease-in-out;
+        
+        &:hover {
+            padding: 10px 15px;
+        }
+
+        a {
+            color: $white;
+        }
     }
 
 
-    a {
+    li a {
         text-decoration: none;
         color: $white;
-        transition: 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             color: $yellow;
@@ -139,7 +148,7 @@
         .view {
             background-color: $yellow;
             color: $white;
-            transition: 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
 
         .view:hover {
@@ -158,7 +167,7 @@
     .btn-courses {
         background-color: $yellow;
         color: $white;
-        transition: 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     .btn-courses:hover {
@@ -169,7 +178,7 @@
     .btn-apply {
         background-color: $white;
         color: $pink2;
-        transition: 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     .btn-apply:hover {

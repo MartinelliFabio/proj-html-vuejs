@@ -62,7 +62,7 @@
 }
 .button {
     display: inline-block;
-    padding: 0.1rem 2.5rem;
+    padding: 1px 43px;
     border-radius: 50px;
     line-height: 60px;
     text-align: center;
@@ -73,6 +73,11 @@
     color: $white;
     font-size: 14px;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $red;
+    }
 }
 
 .description {
@@ -115,7 +120,6 @@
 
         .img-faculties.active {
             filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(241deg) brightness(250%) contrast(101%);
-        
         }
 
         .faculties {
@@ -164,5 +168,10 @@
     color: $white;
     font-size: 14px;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $yellow;
+    }
 }
 </style>
