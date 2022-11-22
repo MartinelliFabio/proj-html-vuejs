@@ -68,5 +68,40 @@ export const store = reactive ({
             text: 'graphic design',
             active: false
         },
+    ],
+    imgPartners: [
+        {
+            img: '../public/img/partner-2.png',
+            text: 'Partner 1',
+        },
+        {
+            img: '../public/img/partner-3.png',
+            text: 'Partner 2'
+        },
+        {
+            img: '../public/img/partner-4.png',
+            text: 'Partner 3'
+        },
+        {
+            img: '../public/img/partner-5.png',
+            text: 'Partner 4'
+        },
+        {
+            img: '../public/img/partner-6.png',
+            text: 'Partner 5'
+        },
+        {
+            img: '../public/img/partner-8.png',
+            text: 'Partner 6'
+        },
+        {
+            img: '../public/img/partner-1.png',
+            text: 'Partner 7'
+        },
+        {
+            img: '../public/img/partner-7.png',
+            text: 'Partner 8'
+        },
+
     ]
 });

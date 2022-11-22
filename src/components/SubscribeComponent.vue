@@ -58,15 +58,11 @@ h2 {
         right: 6px;
         top: -1px;
         box-shadow: 0px 0px 20px rgb(0 0 0 / 7%);
+        transition: all 0.3s ease-in;
     }
 
     .button:hover {
         background-color: $pink;
-        transition: 0.3s ease-in;
-    }
-
-    .button:not(:hover) {
-        transition: 0.3s ease-out;
     }
 
 }
