@@ -9,13 +9,15 @@
                             <a :href="link.url" :class="{ 'active': link.current }">{{ link.title }}
                                 <span v-if="link.arrow" :class="{ 'active': link.current }"><i class="fa-solid fa-sort-down"></i></span>
                             </a>
-                            <div v-if="link.hover && link.pippo">
-                                <ul class="ul-dropdown position-absolute">
-                                    <li v-for="(dropdown, index) in link.linksDropdown" :key="index">
-                                        <a href="#nogo">{{ dropdown.text }}</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <Transition>
+                                <div v-if="link.hover && link.pippo">
+                                    <ul class="ul-dropdown position-absolute">
+                                        <li v-for="(dropdown, index) in link.linksDropdown" :key="index">
+                                            <a href="#nogo">{{ dropdown.text }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </Transition>
                         </li>
                     </ul>
                     <a href="#nogo">
