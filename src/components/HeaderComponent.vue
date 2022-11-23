@@ -16,6 +16,21 @@
                     </a>
                 </div>
             </nav>
+            <div class="box-slider" v-if="counter == 0">
+                <div class="slider-1"></div>
+            </div>
+            <div class="box-slider" v-if="counter == 1">
+                <div class="slider-2"></div>
+            </div>
+            <div class="box-slider" v-if="counter == 2">
+                <div class="slider-3"></div>
+            </div>
+            <div class="right">
+                <span @click="scrollRight"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <div class="left">
+                <span @click="scrollLeft"><i class="fa-solid fa-angle-left"></i></span>
+            </div>
             <div class="d-flex">
                 <div class="d-flex flex-column justify-content-center align-items-center text-center">
                     <div class="title">
@@ -47,6 +62,27 @@
     props: {
         links: Array,
     },
+    data() {
+        return {
+            counter: 0
+        }
+    },
+    methods: {
+        scrollRight() {
+            if(this.counter < 2) {
+                this.counter ++
+            } else {
+                this.counter = 0
+            }
+        },
+        scrollLeft() {
+            if (this.counter >= 1) {
+                this.counter--
+            } else {
+                this.counter = 2
+            }
+        },
+    }
 }
 </script>
 
@@ -55,8 +91,54 @@
 
 .header {
     height: 80vh;
-    background: url('../../public/img/theme_slider2_bg-1.jpg');
     position: relative;
+
+    .right {
+        position: absolute;
+        top: 50%;
+        left: 98%;
+    }
+
+    .left {
+        position: absolute;
+        top: 50%;
+        right: 98%;
+    }
+
+    .right, .left {
+        font-size: 50px;
+        cursor: pointer;
+        color: $white;
+    }
+
+    .box-slider {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        
+    }
+
+    .slider-1 {
+        background-image: url('../../public/img/theme_slider2_bg-1.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider-2 {
+        background-image: url('../../public/img/theme_slider3_bg-1.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider-3 {
+        background-image: url('../../public/img/theme_slider1_bg-1.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
 
     ul {
         li:hover {
@@ -66,7 +148,7 @@
 
     .box-icons {
         position: fixed;
-        top: 35%;
+        top: 50%;
         left: 0;
         padding: 10px;
         background-color: $yellow;

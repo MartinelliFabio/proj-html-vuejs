@@ -12,9 +12,9 @@
             </svg> Related Themes
         </a>
     </div>
-    <div>
-        <a href="" @click.prevent="scrollToTop()" class="back-to-top"></a>
-    </div>
+    <Transition>
+        <a href="" @click.prevent="scrollToTop()" v-show="top" class="back-to-top"></a>
+    </Transition>
 </template>
 
 <script>
@@ -105,5 +105,15 @@
     &:hover {
         background-color: $pink;
     }
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.7s ease-in-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
 }
 </style>

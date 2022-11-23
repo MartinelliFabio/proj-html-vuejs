@@ -1,5 +1,5 @@
 <template>
-    <div class="position-relative">
+    <div class="position-relative mb-5">
         <img src="../../public/img/home-background.png" class="wave-main">
         <div class="container">
             <section>
@@ -152,7 +152,7 @@
             height: 0;
             border: solid transparent;
             border-width: 15px;
-            border-top-color: #DA5F60;
+            border-top-color: $pink;
             content: '';
             pointer-events: none;
         }
