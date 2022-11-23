@@ -1,14 +1,21 @@
 <template>
     <div class="header">
         <div class="bg-red d-flex justify-content-center">
-            <nav class="nav-bar d-flex align-items-end justify-content-between container-fluid">
+            <nav class="nav-bar d-flex align-items-center justify-content-between container-fluid">
                 <img src="../../public/img/theme_eduprime_logo.png" alt="Logo" class="logo">
                 <div class="d-flex align-items-end">
                     <ul class="d-flex">
-                        <li v-for="(link, index) in links" :key="index" class="me-5 d-flex">
+                        <li v-for="(link, index) in links" :key="index" class="me-5 d-flex position-relative" @mouseover="link.hover = true" @mouseleave="link.hover = false">
                             <a :href="link.url" :class="{ 'active': link.current }">{{ link.title }}
                                 <span v-if="link.arrow" :class="{ 'active': link.current }"><i class="fa-solid fa-sort-down"></i></span>
                             </a>
+                            <div v-if="link.hover && link.pippo">
+                                <ul class="ul-dropdown position-absolute">
+                                    <li v-for="(dropdown, index) in link.linksDropdown" :key="index">
+                                        {{ dropdown.text }}
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                     <a href="#nogo">
@@ -95,6 +102,62 @@
     height: 80vh;
     position: relative;
 
+    .nav-bar {
+        position: absolute;
+        top: 0;
+        padding: 30px 50px;
+        font-weight: bold;
+
+        .logo {
+            width: 250px;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                padding: 35px 0;
+            }
+
+            .active {
+                color: $yellow;
+            }
+
+            span {
+                position: relative;
+                margin-left: 5px;
+                bottom: 3px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+        }
+
+        .ul-dropdown {
+            background: $white;
+            width: 200px;
+            top: 80px;
+            padding: 15px;
+            left: -17px;
+            border-radius: 10px;
+
+            li {
+                padding: 10px 13px;
+            }
+        }
+
+        .view {
+            background-color: $yellow;
+            color: $white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .view:hover {
+            background-color: $white;
+            color: $pink2;
+        }
+    }
+
+
     .right {
         position: absolute;
         top: 50%;
@@ -158,6 +221,8 @@
     }
 
     ul {
+        margin: 0;
+
         li:hover {
             color: $yellow;
         }
@@ -217,44 +282,6 @@
         }
     }
 
-
-    .nav-bar {
-        position: absolute;
-        top: 0;
-        padding: 50px;
-        font-weight: bold;
-
-        .logo {
-            width: 250px;
-        }
-
-        ul {
-            list-style: none;
-            
-            .active {
-                color: $yellow;
-            }
-
-            span {
-                position: relative;
-                margin-left: 5px;
-                bottom: 3px;
-                font-size: 12px;
-                cursor: pointer;
-            }
-        }
-
-        .view {
-            background-color: $yellow;
-            color: $white;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .view:hover {
-            background-color: $white;
-            color: $pink2;
-        }
-    }
     .title {
         color: $white;
 

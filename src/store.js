@@ -7,12 +7,44 @@ export const store = reactive ({
             url: '#nogo',
             arrow: true,
             current: true,
+            hover: false,
+            pippo: true,
+            linksDropdown: [
+                {
+                   text:  'Driving School'
+                },
+                {
+                   text:  'High School'
+                },
+                {
+                   text:  'Kinder Garten'
+                },
+                {
+                   text:  'Header Video'
+                },
+            ]
         },
         {
             title: 'Courses',
             url: '#nogo',
             arrow: true,
             current: false,
+            hover: false,
+            pippo: true,
+            linksDropdown: [
+                {
+                   text:  'Our Courses'
+                },
+                {
+                   text:  'Single Course'
+                },
+                {
+                   text:  'Intructor Profile'
+                },
+                {
+                   text:  'Become a Teacher'
+                },
+            ]
         },
         {
             title: 'About Us',
@@ -24,12 +56,41 @@ export const store = reactive ({
             url: '#nogo',
             arrow: true,
             current: false,
+            hover: false,
+            pippo: true,
+            linksDropdown: [
+                {
+                   text:  'EduPrime Blog'
+                },
+                {
+                   text:  'Single Post'
+                },
+                {
+                   text:  'Category Posts'
+                },
+            ]
         },
         {
             title: 'Pages',
             url: '#nogo',
             arrow: true,
             current: false,
+            hover: false,
+            pippo: true,
+            linksDropdown: [
+                {
+                   text:  'How it Works'
+                },
+                {
+                   text:  'Single Event'
+                },
+                {
+                   text:  'University Shop'
+                },
+                {
+                   text:  'Single Product'
+                },
+            ]
         },
         {
             title: 'Contact',
