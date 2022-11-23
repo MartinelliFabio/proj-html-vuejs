@@ -288,7 +288,7 @@
 
         .wave-header {
             position: absolute;
-            bottom: 0;
+            bottom: -1px;
             z-index: 9999;
         }
     }
