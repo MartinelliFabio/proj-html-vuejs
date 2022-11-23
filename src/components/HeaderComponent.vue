@@ -16,15 +16,17 @@
                     </a>
                 </div>
             </nav>
-            <div class="box-slider" v-if="counter == 0">
-                <div class="slider-1"></div>
-            </div>
-            <div class="box-slider" v-if="counter == 1">
-                <div class="slider-2"></div>
-            </div>
-            <div class="box-slider" v-if="counter == 2">
-                <div class="slider-3"></div>
-            </div>
+            <Transition>
+                <div class="box-slider" v-if="counter == 0">
+                    <div class="slider-1"></div>
+                </div>
+                <div class="box-slider" v-else-if="counter == 1">
+                    <div class="slider-2"></div>
+                </div>
+                <div class="box-slider" v-else-if="counter == 2">
+                    <div class="slider-3"></div>
+                </div>
+            </Transition>
             <div class="right">
                 <span @click="scrollRight"><i class="fa-solid fa-angle-right"></i></span>
             </div>
@@ -138,6 +140,21 @@
         background-size: cover;
         width: 100%;
         height: 100%;
+    }
+
+    .v-enter-active,
+    .v-leave-active {
+        transition: opacity 0.7s ease-in-out;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        opacity: 0;
+    }
+
+    .v-enter-to,
+    .v-leave-from {
+        opacity: 1;
     }
 
     ul {
