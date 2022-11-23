@@ -12,7 +12,7 @@
                             <div v-if="link.hover && link.pippo">
                                 <ul class="ul-dropdown position-absolute">
                                     <li v-for="(dropdown, index) in link.linksDropdown" :key="index">
-                                        {{ dropdown.text }}
+                                        <a href="#nogo">{{ dropdown.text }}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -142,6 +142,15 @@
 
             li {
                 padding: 10px 13px;
+            }
+
+            li a {
+                color: $black;
+                font-size: 15px;
+
+                &:hover {
+                    color: $pink;
+                }
             }
         }
 
