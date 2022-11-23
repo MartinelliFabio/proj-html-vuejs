@@ -218,7 +218,7 @@
 
     .v-enter-active,
     .v-leave-active {
-        transition: opacity 0.7s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
     }
 
     .v-enter-from,
