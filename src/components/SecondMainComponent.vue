@@ -102,6 +102,7 @@ a {
 
 .bg-red {
     background-color: $pink;
+    padding-top: 150px;
 }
 
 .logo {
@@ -155,6 +156,11 @@ a {
             color: $white;
             font-size: 14px;
             box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $yellow;
+            }
         }
     }
     
@@ -184,26 +190,23 @@ a {
 
     .button {
         display: inline-block;
-        padding: 0.1rem 2rem;
+        padding: 1px 43px;
         border-radius: 50px;
         line-height: 60px;
         text-align: center;
         font-size: 15px;
+        font-weight: bold;
     }
 
     .btn-event {
         background-color: $yellow;
         color: $white;
         box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+        transition: all 0.3s ease-in-out;
     }
 
     .btn-event:hover {
         background-color: $pink;
-        transition: 0.3s ease-in;
-    }
-
-    .btn-event:not(:hover) {
-        transition: 0.3s ease-out;
     }
 }
 </style>

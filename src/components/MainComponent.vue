@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FirstMainComponent :imgs='store.imgFirstMain'/>
+        <FirstMainComponent :imgs='store.imgFirstMain' :items='store.faculties'/>
     </div>
     <div>
         <SecondMainComponent/>

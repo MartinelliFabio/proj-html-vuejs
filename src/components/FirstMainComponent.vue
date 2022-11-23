@@ -23,22 +23,24 @@
             </div>
             <div class="box-items mt-4">
                 <div class="container d-flex text-center justify-content-center">
-                    <div v-for="(img, index) in imgs" :key="index" class="box" :class="{ 'active': img.active }">
+                    <div v-for="(img, index) in imgs" :key="index" class="box" :class="{ 'active': img.text == text }" @click="text = img.text">
                         <a href="#nogo">
-                            <img :src="img.img" :alt="img.text" class="img-faculties" :class="{ 'active': img.active }">
+                            <img :src="img.img" :alt="img.text" class="img-faculties" :class="{ 'active': img.text == text }">
                             <p class="text-capitalize fw-bold faculties">{{img.text}}</p>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-center mt-5 pt-5">
-                <div class="me-5">
-                    <img src="../../public/img/Gavel-Illustration-e1556884768193.png">
-                </div>
-                <div class="description-faculties ms-5">
-                    <h2 class="mb-4 fw-bold display-6">Law Faculty</h2>
-                    <p class="mb-4 text">Learning from world-leading academics and practioners, you'll not only receive an outstanding grounding in the theory of law, but you will be able to understand how those principles are applied in practice through a range of student-led activities and competitions.</p>
-                    <a href="#nogo"><span class="more button">Read More</span></a>
+            <div v-for="(item, index) in items" :key="index" v-show="item.title == text">
+                <div class="d-flex justify-content-center mt-5 pt-5">
+                    <div class="box-img">
+                        <img :src="item.img">
+                    </div>
+                    <div class="description-faculties" >
+                        <h2 class="mb-4">{{ item.title }}</h2>
+                        <p class="text">{{ item.text }}</p>
+                        <a href="#nogo"><span class="more button">Read More</span></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -50,7 +52,13 @@
         name: 'FirstMainComponent',
         props: {
             imgs: Array,
+            items: Array
         },
+        data() {
+            return {
+                text: 'law faculty', 
+            }
+        }
     }
 </script>
 
@@ -156,10 +164,17 @@
 }
 
 .description-faculties {
-    width: 30%;
+    width: 28.5%;
+    margin-left: 100px;
+    
+    h2 {
+        text-transform: capitalize;
+    }
 
     .text {
         color: $gray-text;
+        margin-bottom: 50px;
+        margin-top: 40px;
     }
 }
 

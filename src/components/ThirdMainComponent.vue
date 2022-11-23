@@ -165,16 +165,12 @@
             color: $white;
             font-size: 14px;
             box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
-    }
+            transition: all 0.3s ease-in-out;
 
-    a.view-course:hover {
-        background-color: $yellow;
-        color: $white;
-        transition: 0.3s ease-in;   
-    }
-
-    a.view-course:not(:hover) {
-        transition: 0.3s ease-out;
+            &:hover {
+                background-color: $yellow;
+                color: $white;
+            }
     }
 
 }
@@ -213,20 +209,16 @@
         border-radius: 35px;
         text-align: center;
         font-size: 14px;
+        transition: all 0.3s ease-in-out;
     }
 
     .discover {
         background-color: $pink;
         color: $white;
-    }
 
-    .discover:hover {
-        background-color: $yellow;
-        transition: 0.3s ease-in;
-    }
-
-    .discover:not(:hover) {
-        transition: 0.3s ease-out;
+        &:hover {
+            background-color: $yellow;
+        }
     }
 }
 </style>

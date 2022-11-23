@@ -7,20 +7,29 @@ $fa-font-path : "./webfonts";
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
 
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
 
 @import 'bootstrap/scss/bootstrap.scss';
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Fredoka One', cursive;
     color: $black2;
+    letter-spacing: .5px;
 }
 
 p, a, input {
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+.button {
+    font-weight: bold;
 }
 
 img {
